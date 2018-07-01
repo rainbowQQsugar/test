@@ -3,6 +3,7 @@ package com.jia.jsmvvm.home.view;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.jia.jsmvvm.R;
 import com.jia.jsmvvm.databinding.ActivityMainBinding;
@@ -16,5 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ActivityMainBinding activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         NewsViewModel viewModel = new NewsViewModel(this, activityMainBinding);
+
+        Toast.makeText(this, "此乃测试修改项", Toast.LENGTH_SHORT).show();
     }
 }
